@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
+import { buttonVariants,Button } from "@/components/ui/button"
 
 export default function IndexPage() {
   return (
@@ -9,12 +9,8 @@ export default function IndexPage() {
       <div className="flex max-w-[980px] flex-col items-start gap-2">
         <h1 className="text-3xl font-extrabold leading-tight tracking-tighter md:text-4xl">
           Beautifully designed components <br className="hidden sm:inline" />
-          built with Radix UI and Tailwind CSS.
+          Theming Wrapped in a Tailwind Plugin/Preset with shadcn/ui
         </h1>
-        <p className="max-w-[700px] text-lg text-muted-foreground">
-          Accessible and customizable components that you can copy and paste
-          into your apps. Free. Open Source. And Next.js 13 Ready.
-        </p>
       </div>
       <div className="flex gap-4">
         <Link
@@ -33,6 +29,14 @@ export default function IndexPage() {
         >
           GitHub
         </Link>
+      </div>
+      <div className="flex gap-4">
+        <Button >Primary</Button>
+        <Button variant="secondary" className="animate-in zoom-in-50" >Secondary</Button>
+        <Button variant="destructive" >Destructive</Button>
+        <Button variant="ghost" >Ghost</Button>
+        <Button variant="outline" >Outline</Button>
+        <Button variant="link" >Link</Button>
       </div>
     </section>
   )
